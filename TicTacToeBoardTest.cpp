@@ -41,6 +41,6 @@ TEST(TicTacToeBoardTest, placepieceoutofbounds)
 {
 TicTacToeBoard ex;
 Piece temp=ex.placePiece(4,4);
-ASSERT_EQ(invalid, temp);
+ASSERT_EQ(Invalid, temp);
 
 }
