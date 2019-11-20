@@ -28,3 +28,12 @@ ASSERT_EQ(O, temp);
 
 }
 
+TEST(TicTacToeBoardTest, toggleturntest2toggle)
+{
+TicTacToeBoard ex;
+Piece temp = ex.toggleTurn();
+temp = ex.toggleTurn();
+ASSERT_EQ(O, temp);
+
+}
+
