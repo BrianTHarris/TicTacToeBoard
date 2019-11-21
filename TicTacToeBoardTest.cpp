@@ -49,7 +49,7 @@ TEST(TicTacToeBoardTest, placepieceinbounds)
 {
 TicTacToeBoard ex;
 Piece temp=ex.placePiece(2,1);
-ASSERT_EQ(Invalid, temp);
+ASSERT_EQ(X, temp);
 
 }
 
