@@ -53,4 +53,11 @@ Piece temp=ex.placePiece(2,1);
 ASSERT_EQ(X, temp);
 }
 
+TEST(TicTacToeBoardTest, placepieceoccpiedspot)
+{
+TicTacToeBoard ex;
+ex.placePiece(2,1);
+Piece temp=ex.placePiece(2,1);
+ASSERT_EQ(X, temp);
+}
 
