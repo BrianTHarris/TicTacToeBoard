@@ -61,3 +61,26 @@ Piece temp=ex.placePiece(2,1);
 ASSERT_EQ(X, temp);
 }
 
+TEST(TicTacToeBoardTest, getpieceoccpiedspot)
+{
+TicTacToeBoard ex;
+ex.placePiece(2,1);
+Piece temp=ex.getPiece(2,1);
+ASSERT_EQ(X, temp);
+}
+TEST(TicTacToeBoardTest, getpieceblankspot)
+{
+TicTacToeBoard ex;
+ex.placePiece(2,1);
+Piece temp=ex.getPiece(0,1);
+ASSERT_EQ(Blank, temp);
+}
+
+TEST(TicTacToeBoardTest, getpieceoutofbounds)
+{
+TicTacToeBoard ex;
+ex.placePiece(2,1);
+Piece temp=ex.getPiece(4,1);
+ASSERT_EQ(Invalid, temp);
+}
+
