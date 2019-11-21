@@ -33,7 +33,7 @@ TEST(TicTacToeBoardTest, toggleturntest2toggle)
 TicTacToeBoard ex;
 Piece temp = ex.toggleTurn();
 temp = ex.toggleTurn();
-ASSERT_EQ(O, temp);
+ASSERT_EQ(X, temp);
 
 }
 
@@ -42,7 +42,8 @@ TEST(TicTacToeBoardTest, placepieceoutofbounds)
 TicTacToeBoard ex;
 Piece temp=ex.placePiece(4,4);
 ASSERT_EQ(Invalid, temp);
-
+temp = ex.toggleTurn();
+ASSERT_EQ(X, temp);
 }
 
 TEST(TicTacToeBoardTest, placepieceinbounds)
@@ -50,7 +51,6 @@ TEST(TicTacToeBoardTest, placepieceinbounds)
 TicTacToeBoard ex;
 Piece temp=ex.placePiece(2,1);
 ASSERT_EQ(X, temp);
-
 }
 
 
