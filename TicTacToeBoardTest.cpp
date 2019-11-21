@@ -44,3 +44,13 @@ Piece temp=ex.placePiece(4,4);
 ASSERT_EQ(Invalid, temp);
 
 }
+
+TEST(TicTacToeBoardTest, placepieceinbounds)
+{
+TicTacToeBoard ex;
+Piece temp=ex.placePiece(2,1);
+ASSERT_EQ(Invalid, temp);
+
+}
+
+
