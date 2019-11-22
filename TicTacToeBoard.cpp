@@ -107,9 +107,12 @@ Piece TicTacToeBoard::getWinner()
 	{
 		for(int j=0; j<3; ++j)
 		{
-			if(board[j][i] == Blank)
+			if(board[i][j] == Blank)
 				return Invalid;
 		}
 	}
-	return Blank;
+	if(board[0][0] != Blank && board[0][1] != Blank && board[0][2] != Blank && board[1][0] != Blank && board[1][1] != Blank && board[1][2] != Blank && board[2][0] != Blank && board[2][1] != Blank && board[2][1] != Blank) 
+		return Blank;
+	else
+		return Invalid;
 }
