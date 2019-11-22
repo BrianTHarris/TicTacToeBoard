@@ -158,25 +158,25 @@ ASSERT_EQ(O,ex.getWinner());
 TEST(TicTacToeBoardTest, getwinnerblankspot)
 {
 TicTacToeBoard ex;
-Piece temp=ex.placePiece(0,1);
-Piece temp=ex.placePiece(0,2);
-Piece temp=ex.placePiece(2,2);
-Piece temp=ex.placePiece(2,1);
-Piece temp=ex.placePiece(1,1);
+ex.placePiece(0,1);
+ex.placePiece(0,2);
+ex.placePiece(2,2);
+ex.placePiece(2,1);
+ex.placePiece(1,1);
 ASSERT_EQ(Invalid, ex.getWinner());
 }
 
 TEST(TicTacToeBoardTest, tiegame)
 {
 TicTacToeBoard ex;
-Piece temp=ex.placePiece(0,1);
-Piece temp=ex.placePiece(0,2);
-Piece temp=ex.placePiece(2,2);
-Piece temp=ex.placePiece(2,1);
-Piece temp=ex.placePiece(1,1);
-Piece temp=ex.placePiece(1,2);//o
-Piece temp=ex.placePiece(1,0);//x
-Piece temp=ex.placePiece(0,0);//o
-Piece temp=ex.placePiece(2,0);//x
+ex.placePiece(0,1);
+ex.placePiece(0,2);
+ex.placePiece(2,2);
+ex.placePiece(2,1);
+ex.placePiece(1,1);
+ex.placePiece(1,2);//o
+ex.placePiece(1,0);//x
+ex.placePiece(0,0);//o
+ex.placePiece(2,0);//x
 ASSERT_EQ(Blank, ex.getWinner());
 }
