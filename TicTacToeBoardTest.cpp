@@ -92,7 +92,7 @@ ex.placePiece(1,1);//o
 ex.placePiece(0,0);//x
 ex.placePiece(1,1);//o
 ex.placePiece(2,2);//x
-ASSERT_EQ(X,ex.getWineer());
+ASSERT_EQ(X,ex.getWinner());
 }
 
 TEST(TicTacToeBoardTest, getwinnerdiagnolup)
@@ -104,5 +104,5 @@ ex.placePiece(0,0);//x
 ex.placePiece(2,0);//o
 ex.placePiece(2,2);//x
 ex.placePiece(0,2);//o
-ASSERT_E(O,ex.getWineer());
+ASSERT_EQ(O,ex.getWinner());
 }
