@@ -106,3 +106,27 @@ ex.placePiece(2,2);//x
 ex.placePiece(0,2);//o
 ASSERT_EQ(O,ex.getWinner());
 }
+
+TEST(TicTacToeBoardTest, getwinnerdiagnoldownO)
+{
+TicTacToeBoard ex;
+ex.placePiece(4,4);//x
+ex.placePiece(1,1);//o
+ex.placePiece(1,1);//x
+ex.placePiece(0,0);//o
+ex.placePiece(1,1);//x
+ex.placePiece(2,2);//o
+ASSERT_EQ(O,ex.getWinner());
+}
+
+TEST(TicTacToeBoardTest, getwinnerdiagnolupX)
+{
+TicTacToeBoard ex;
+//ex.placePiece(0,0);//x
+ex.placePiece(1,1);//x
+ex.placePiece(0,0);//o
+ex.placePiece(2,0);//x
+ex.placePiece(2,2);//o
+ex.placePiece(0,2);//x
+ASSERT_EQ(X,ex.getWinner());
+}
