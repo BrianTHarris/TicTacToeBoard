@@ -84,3 +84,25 @@ Piece temp=ex.getPiece(4,1);
 ASSERT_EQ(Invalid, temp);
 }
 
+TEST(TicTacToeBoardTest, getwinnerdiagnoldown)
+{
+TicTacToeBoard ex;
+ex.placePiece(1,1);//x
+ex.placePiece(1,1);//o
+ex.placePiece(0,0);//x
+ex.placePiece(1,1);//o
+ex.placePiece(2,2);//x
+ASSERT_EQ(X,ex.getWineer());
+}
+
+TEST(TicTacToeBoardTest, getwinnerdiagnolup)
+{
+TicTacToeBoard ex;
+ex.placePiece(0,0);//x
+ex.placePiece(1,1);//o
+ex.placePiece(0,0);//x
+ex.placePiece(2,0);//o
+ex.placePiece(2,2);//x
+ex.placePiece(0,2);//o
+ASSERT_E(O,ex.getWineer());
+}
