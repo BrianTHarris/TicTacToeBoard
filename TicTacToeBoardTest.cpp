@@ -181,7 +181,7 @@ ex.placePiece(2,0);//x
 ASSERT_EQ(Blank, ex.getWinner());
 }
 
-TEST(TicTacToeBoardTest, invalidcall to place piece)
+TEST(TicTacToeBoardTest, invalidcalltoplacepiece)
 {
 TicTacToeBoard ex;
 ex.placePiece(0,0);//x
