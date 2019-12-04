@@ -163,7 +163,7 @@ TicTacToeBoard ex;
 //ex.placePiece(2,2);
 //ex.placePiece(2,1);
 //ex.placePiece(1,1);
-ASSERT_EQ(Invalid, ex.getWinner());
+ASSERT_EQ(Invalid,ex.getWinner());
 }
 
 TEST(TicTacToeBoardTest, tiegame)
@@ -179,4 +179,16 @@ ex.placePiece(1,0);//x
 ex.placePiece(0,0);//o
 ex.placePiece(2,0);//x
 ASSERT_EQ(Blank, ex.getWinner());
+}
+
+TEST(TicTacToeBoardTest, invalidcall to place piece)
+{
+TicTacToeBoard ex;
+ex.placePiece(0,0);//x
+ex.placePiece(1,1);//o
+ex.placePiece(0,0);//x
+ex.placePiece(0,1);//o
+ex.placePiece(2,2);//x
+ex.placePiece(2,1);//o
+ASSERT_EQ(INvalid,ex.placePiece(0,2));
 }
