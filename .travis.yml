@@ -18,5 +18,5 @@ script:
   - make
   - ./TicTacToeBoardTest
   
- after_sucess:
-  - coveralls --exclude 'Test.cpp --exclude ${GTEST_DIR} --gcov-options '\-lpbc
+after_sucess:
+  - coveralls --exclude *Test.cpp --exclude ${GTEST_DIR} --gcov-options '\-lpbc'
