@@ -190,5 +190,5 @@ ex.placePiece(0,0);//x
 ex.placePiece(0,1);//o
 ex.placePiece(2,2);//x
 ex.placePiece(2,1);//o
-ASSERT_EQ(INvalid,ex.placePiece(0,2));
+ASSERT_EQ(Invalid,ex.placePiece(0,2));
 }
